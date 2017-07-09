@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.taran1392.apps.myWidget">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+
+        >
+
+
+        <activity
+            android:name="com.taran1392.apps.myWidget.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.taran1392.apps.myWidget.WidgetConfig"
+
+
+            >
+
+            >
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+
+
+        </activity>
+
+
+        <receiver android:name="com.taran1392.apps.myWidget.widgetproviders.MyWidgetProvider"
+            android:label="@string/widget_label"
+            android:icon="@drawable/clock">
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/clockwidgetprovider" />
+        </receiver>
+
+
+        <service android:name="com.taran1392.apps.myWidget.services.ClockService"
+
+
+            />
+
+        <activity android:name="com.taran1392.apps.myWidget.floatingWidget.activity.FloatingMainActivity"
+            android:label="floating widget"
+            >
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.taran1392.apps.myWidget.floatingWidget.services.FloatingViewService"
+
+            android:enabled="true"
+            android:exported="false"/>
+
+
+    </application>
+
+</manifest>

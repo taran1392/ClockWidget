@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.taran1392.apps.myWidget.MainActivity">
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="About"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_rate"
+        android:orderInCategory="100"
+        android:title="Rate Digital Clock Widget"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:title="Tell a friend"
+        app:showAsAction="always" />
+
+
+
+
+</menu>
